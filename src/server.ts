@@ -3,6 +3,7 @@ import Middleware from "./config/middleware";
 import ErrorHandler from './helper/error.handler';
 import Routes from './router/index.router';
 import { DB } from "./config/DB";
+import { Crons } from "./crons/index.cron";
 
 export class Server {
     public app: express.Application;
@@ -22,6 +23,10 @@ export class Server {
 
         // Error handling
         ErrorHandler.init(this);
+
+
+        //Activate Crons
+        Crons.start();
 
     }
 }
