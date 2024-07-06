@@ -4,11 +4,12 @@ import ErrorHandler from './helper/error.handler';
 import Routes from './router/index.router';
 import { DB } from "./config/DB";
 import { Crons } from "./crons/index.cron";
+import { CONFIG } from "./config/environment";
 
 export class Server {
     public app: express.Application;
     isDbConnected: boolean;
-    constructor () { 
+    constructor() {
         this.app = express();
         this.isDbConnected = false;
 
@@ -26,7 +27,9 @@ export class Server {
 
 
         //Activate Crons
-        Crons.start();
+        if (CONFIG.keepAliveType == 'production') {
+            Crons.start();
+        }
 
     }
 }

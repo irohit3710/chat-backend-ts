@@ -23,4 +23,5 @@ export const CONFIG = {
   },
   uploadsFolderPath: path.resolve(__dirname, "../../uploads"),
   aliveUrl: process.env.ALIVE_URL || '',
+  keepAliveType: process.env.KEEP_ALIVE || '',
 };

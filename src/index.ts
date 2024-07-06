@@ -42,7 +42,7 @@ let users:any = {};
 const io = require("socket.io")(server, {
 	pingTimeout: 60000,
 	cors: {
-		origin: `${process.env.FRONT_URL}`,
+		origin: "*",
 	},
 });
 
