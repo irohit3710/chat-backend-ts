@@ -24,4 +24,8 @@ export const CONFIG = {
   uploadsFolderPath: path.resolve(__dirname, "../../uploads"),
   aliveUrl: process.env.ALIVE_URL || '',
   keepAliveType: process.env.KEEP_ALIVE || '',
+  brevo:{
+    sender:process.env.BREVO_SENDER || '',
+    apikey: process.env.BREVO_APIKEY || '',
+  }
 };

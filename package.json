@@ -19,6 +19,7 @@
     "typescript": "^5.4.4"
   },
   "dependencies": {
+    "@getbrevo/brevo": "^2.2.0",
     "@types/bcrypt": "^5.0.2",
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.17",
